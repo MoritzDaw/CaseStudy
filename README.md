@@ -19,10 +19,6 @@ The goal is to enable procurement and production teams to:
 - increase safety stock where necessary,
 - reduce the risk of production downtime.
 
-## What was done in recent projects:
-The procurement specialists are communicating with the suppliers. For every Mail interaction, a PO_EVENT is created and a conversation summary is stored in the "Comment" field of PO_EVENTS. A different model then classifies the comment to one of six event types. The severity of the problem is then ranked by a human individually. 
-Hint: You might want to use the combination of severity and Event Type to label your data set and train your model respectively.
-
 ### 2. Your Role as a Forward Deployed AI Engineer
 As a Forward Deployed AI Engineer, you collaborate directly with customer stakeholders across Procurement, Supply Chain, and Production. You are expected to:
 - understand the business processes and operational bottlenecks,
@@ -45,6 +41,9 @@ Build a machine learning solution that predicts whether a PO is likely to become
 - 1 = at risk
 
 You will later present your results to a mock panel consisting of the CFO and CTO.
+
+## What was done in recent projects (Build up of PO_EVENTS):
+Procurement specialists communicate regularly with suppliers. For every email interaction, a PO_EVENT is generated, and a conversation summary is stored in the comment field. An ML model then classifies the comment into one of six event types. The severity of each issue is assessed manually by a human reviewer.
 
 ### 4. Tasks
 #### 4.1 Data Extraction and Understanding
@@ -103,5 +102,46 @@ Remark: Remember that you are talking to Top Level Management. They are more int
 
 
 
+## EKKO
+| Field             | Type     | Description                                                                 |
+|------------------|----------|-----------------------------------------------------------------------------|
+| ebeln            | text     | Purchase order number (unique identifier of PO header)                      |
+| lifnr            | text     | Supplier number (vendor ID assigned in SAP)                                 |
+| bukrs            | text     | Company code – identifies the legal entity                                   |
+| bedat            | date     | Creation date of the purchase order                                          |
+| bsart            | text     | Document type (e.g., NB – standard PO)                                       |
+| release_indicator| bool     | Whether the PO is released/approved                                          |
+| header_text      | text     | Free-text PO header notes                                                    |
 
+
+## EKPO
+| Field     | Type     | Description                                                                  |
+|-----------|----------|------------------------------------------------------------------------------|
+| ebeln     | text     | Purchase order number (links to `ekko`)                                      |
+| ebelp     | int4     | PO item number (line number within the PO)                                   |
+| matnr     | text     | Material number (identifier of the ordered material)                         |
+| menge     | numeric  | Ordered quantity                                                             |
+| eindt     | date     | Delivery date requested                                                       |
+| price     | numeric  | Net price of the item                                                         |
+| item_text | text     | Item-level text (e.g., description or notes)                                 |
+
+
+## LFA1
+| Field     | Type    | Description                                                                  |
+|-----------|---------|------------------------------------------------------------------------------|
+| lifnr     | text    | Supplier number (primary key, links to `ekko.lifnr`)                         |
+| name1     | text    | Supplier name (company name)                                                 |
+| country   | bpchar  | Country code (ISO-style, e.g., DE, US)                                       |
+| risk_score| int4    | Custom risk attribute (e.g., 1–10 or risk categories)                        |
+
+
+## PO_EVENTS
+| Field      | Type      | Description                                                                 |
+|------------|-----------|-----------------------------------------------------------------------------|
+| id         | int8      | Unique event identifier                                                      |
+| ebeln      | text      | Related purchase order number (links to `ekko`)                              |
+| event_ts   | timestamp | Timestamp of the communication event                                         |
+| event_type | text      | ML-classified event category (e.g., delay, confirmation, cancellation etc.) |
+| severity   | int4      | Manually assigned severity level of the issue (ranking)                     |
+| comment    | text      | Conversation summary extracted from email text                               |
 
