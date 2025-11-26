@@ -1,6 +1,6 @@
 # Procurement Risk Intelligence - AI Case Study
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/github/MoritzDaw/procurementPilot/blob/main/notebooks/00_getting_started.ipynb)
+https://colab.research.google.com/github/MoritzDaw/CaseStudy/blob/main/notebooks/00_getting_started.ipynb)
 
 ### 1. Business Scenario
 A large global industrial manufacturing company operates multiple production facilities across Europe, Asia, and North America. Every year, the organization processes more than 7.000 purchase orders (POs) from a diverse supplier base. The supply chain is complex, with long lead times, fluctuating material availability, and variable supplier performance.
