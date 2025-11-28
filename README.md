@@ -96,7 +96,7 @@ In addition to the technical implementation, candidates should address business 
 - What risks or limitations should the organization be aware of before operationalizing this solution?
 
 These aspects will be relevant for the management-level discussion. 
-When answering these questions, please base your analysis on **historical data** rather than hypothetical events.
+When answering these questions, you might want to base your analysis on **historical data** rather than hypothetical events.
 
 ---
 
