@@ -116,7 +116,7 @@ Candidates are expected to submit:
    - your proposed AI solution,
    - key design decisions and assumptions,
    - expected business value and impact.  
-   Please use the slide master provided in our invitation.
+Please use the slide master provided in our invitation.
 
 **Note:** We understand that such an exercise could theoretically be expanded indefinitely. As guidance, we ask candidates to invest **no more than approximately two days** into the development of their solution and the preparation of the presentation. The evaluation will be based on the results and insights expected from this level of effort.
 
