@@ -87,7 +87,7 @@ Evaluate the model using suitable metrics.
 
 ### 5. Business Deliverables (Important)
 
-In addition to the technical implementation, candidates should address high-level business questions, such as:
+In addition to the technical implementation, candidates should address business questions, such as:
 
 - What is the estimated financial impact of deploying this solution?  
 
@@ -95,7 +95,8 @@ In addition to the technical implementation, candidates should address high-leve
 
 - What risks or limitations should the organization be aware of before operationalizing this solution?
 
-These aspects will be relevant for the management-level discussion.
+These aspects will be relevant for the management-level discussion. 
+When answering these questions, please base your analysis on **historical data** rather than hypothetical events.
 
 ---
 
