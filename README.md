@@ -111,7 +111,7 @@ Candidates are expected to submit:
    - model training,
    - evaluation.
 
-2. **A short slide deck (5–8 slides)** for a presentation to the CFO and CTO explaining:
+2. **A short slide deck (4–6 slides)** for a presentation to the CFO and CTO explaining:
    - the business problem,
    - your proposed AI solution,
    - key design decisions and assumptions,
