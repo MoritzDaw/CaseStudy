@@ -3,7 +3,7 @@
 https://colab.research.google.com/github/MoritzDaw/CaseStudy/blob/main/00_getting_started.ipynb)
 
 ### 1. Business Scenario
-A large global industrial manufacturing company operates multiple production facilities across Europe, Asia, and North America. Every year, the organization processes more than 7,000 purchase orders (POs) from a diverse supplier base. The supply chain is complex, with long lead times, fluctuating material availability, and highly variable supplier performance.
+A large global industrial manufacturing company operates multiple production facilities across Europe, Asia, and North America. Every year, the organization processes more than 4,000 purchase orders (POs) from a diverse supplier base. The supply chain is complex, with long lead times, fluctuating material availability, and highly variable supplier performance.
 
 In recent years, the company has experienced increasing supply chain disruptions, including:
 - delayed deliveries,
