@@ -54,7 +54,7 @@ Procurement specialists communicate regularly with suppliers. For every email in
 ### 4. Tasks
 
 #### 4.1 Data Extraction and Understanding
-Using the provided REST API:
+Using the provided database connection:
 
 1. Load the tables **LFA1**, **EKKO**, **EKPO**, and **PO_EVENTS**.
 2. Explore and document each dataset’s content and structure.
